@@ -1,24 +1,14 @@
-# README
+# Library Management System (Ruby on Rails)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Student Page
 
-Things you may want to cover:
+* Can Sign up, Sign in
+* View the books available
+* Request a new book
+* See the status of book
 
-* Ruby version
+## Admin
+* View Requested Books
+* Accept or Reject student request
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[Demo video](https://www.loom.com/share/bc591528f48e48a999b189389eb07f37)
