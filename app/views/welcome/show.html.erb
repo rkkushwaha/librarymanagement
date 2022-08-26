@@ -1,0 +1,8 @@
+<%if current_student.present?%>
+    <h1>Welcome, <%=current_student.email%></h1>
+<% elsif current_admin.present? %>
+    <h1>Welcome, <%=current_admin.email%></h1>
+<%else%>
+    <h1>Welcome, Guest</h1>
+<%end%>
+

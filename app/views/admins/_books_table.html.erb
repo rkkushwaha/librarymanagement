@@ -1,0 +1,11 @@
+<% @issue_books.each do |issue_book| %>        
+    <tr id="<%= issue_book.id%>_issue_book">
+        <td><%= issue_book.book.title %></td>
+        <td><%= issue_book.book.isbn %></td>
+        <td><%= issue_book.book.authors %></td>
+        <td id="<%= issue_book.id%>_stat"><%= issue_book.status %></td>
+        <td><%= issue_book.count_days %></td>
+        <td><%= link_to 'Accept', issue_book_path(issue_book), class: 'update_book', method: :patch%></td>
+        <td><%= link_to 'Reject', issue_book_path(issue_book),method: :delete%></td>
+    </tr>
+<% end %>

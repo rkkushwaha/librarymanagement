@@ -1,0 +1,28 @@
+<%if admin_signed_in? %>
+    <h3>Requested Books</h3>
+    <br>
+    <div id="issue_books">
+        <table class="table table-hover">
+        <thead>
+            <tr>
+            <th scope="col">Title</th>
+            <th scope="col">ISBN</th>
+            <th scope="col">Authors</th>
+            <th scope="col">Status</th>
+            <th scope="col">Number of Days</th>
+            <th scope="col">Approval</th>
+            <th scope="col">Reject</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <div id ="table_up">
+                <%= render partial: 'books_table' %>
+            </div>
+        </tbody>
+
+    </table>
+
+
+    
+<%end%>

@@ -1,0 +1,36 @@
+<%if student_signed_in? %>
+    <h3>Issued Books</h3>
+    <br>
+
+        <table class="table table-hover">
+        <thead>
+            <tr>
+            <th scope="col">Title</th>
+            <th scope="col">ISBN</th>
+            <th scope="col">Authors</th>
+            <th scope="col">Status</th>
+            <th scope="col">Number of Days</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        
+        <% @issue_books.each do |issue_book| %>
+            <tr>
+            <td><%= issue_book.book.title %></td>
+            <td><%= issue_book.book.isbn %></td>
+            <td><%= issue_book.book.authors %></td>
+            <td><%= issue_book.status %></td>
+            <td><%= issue_book.count_days %></td>
+            </tr>
+        <% end %>
+
+    
+
+    </tbody>
+
+    </table>
+
+
+    
+<%end%>

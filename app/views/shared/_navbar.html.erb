@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">LMS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+       
+    <ul class="navbar-nav ml-auto">     
+     <%if student_signed_in? %>
+
+      <li class="nav-item mr-auto">
+        <%=link_to 'Books',home_index_path ,class: 'nav-link'%>
+      </li>
+
+      <li class="nav-item ">
+        <%=link_to 'Issue New Book' ,new_issue_book_path, class: 'nav-link'%>
+      </li>
+
+      <li class="nav-item ">
+        <%=link_to 'Issued Books' ,issue_books_path, class: 'nav-link'%>
+      </li>
+
+      <li class="nav-item ">
+        <%=link_to 'Edit Profile',new_student_registration_path ,class: 'nav-link'%>
+      </li>
+
+      <li class="nav-item ">
+        <%=link_to 'Sign Out',destroy_student_session_path,method: :delete ,class: 'nav-link'%>
+      </li>
+      
+      <%elsif admin_signed_in? %>
+       <li class="nav-item ">
+        <%=link_to 'View Requested Book',admins_path,class: 'nav-link'%>
+      </li>
+      <li class="nav-item ">
+        <%=link_to 'Sign Out',destroy_admin_session_path,method: :delete ,class: 'nav-link'%>
+      </li>
+     <%else%>
+        <li class="nav-item">
+        <li class="nav-item">
+        <%=link_to 'Admin',new_admin_session_path, class: 'nav-link'%>
+        </li>
+        <%=link_to 'Register',new_student_registration_path , class: 'nav-link'%>
+        </li>
+         <li class="nav-item">
+        <%=link_to 'Sign In',new_student_session_path, class: 'nav-link'%>
+        </li>
+     <%end%>
+    </ul>
+  </div>
+</nav>
